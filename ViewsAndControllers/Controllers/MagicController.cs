@@ -18,8 +18,15 @@ namespace ViewsAndControllers.Controllers
         public ActionResult SayMagic(int one, int two)
         {
             Random gen = new Random();
-            int random = gen.Next(one,two);
-            return View(viewName: "Index", model: random);
+            if (one > two)
+            {
+                return View(viewName: "Index", model: "Invalid Input");
+            }
+            else
+            {
+                int random = gen.Next(one, two);
+                return View(viewName: "Index", model: random);
+            }
         }
     }
 }
