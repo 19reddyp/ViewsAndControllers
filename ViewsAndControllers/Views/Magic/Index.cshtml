@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div>
+    <form action="SayMagic" method="post">
+        <p>Number 1: </p>
+        <input name="one" type="number" />
+        <p>Number 2: </p>
+        <input name="two" type="number" />
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        Random integer: 
+        @Model
+    </p>
+</div>

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@model double
+<div>
+    <form action="SaySquare" method="post">
+        <input name="inputNumber" type="number" step="0.01"/>
+        <input name="submit" type="submit" />
+    </form>
+    <p>
+        @Model
+    </p>
+</div>
